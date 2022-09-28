@@ -1,0 +1,104 @@
+.outerContainer{
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    padding: 10px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 56px;
+    height: 56px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    opacity: 90%;
+    width: 100%;
+    z-index: 2;
+}
+
+.header > span:nth-child(1){
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 1px 5px;
+    font-size: 25px;
+    box-sizing: border-box;
+}
+
+.header > span:nth-child(1):hover{
+    background-color: rgba(128, 128, 128, 0.281);
+}
+
+.header > span:nth-child(2){
+    font-weight: bold;
+}
+.mainSection{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 0px 10px 10px 10px;
+    gap: 10px;
+}
+
+.searchContainer{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px black solid;
+    align-items: center;
+    gap: 10px;
+}
+
+.searchContainer > input{
+    border: none;
+    font-size: 18px;
+    width: 100%;
+}
+.searchContainer > input:focus{
+    outline: none;
+}
+
+.resultsContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.result{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.result:hover{
+    background-color: rgba(128, 128, 128, 0.26);
+}
+
+.userContent{
+    display: flex;
+    flex-direction: column;
+}
+
+.userPicture{
+    display: flex;
+}
+
+.userPicture > img{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: grey;
+}

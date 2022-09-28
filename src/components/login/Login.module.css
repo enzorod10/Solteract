@@ -1,0 +1,107 @@
+.outerContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: rgba(128, 128, 128, 0.644);
+}
+
+.formContainer{
+    z-index: 2;
+    height: 550px;
+    width: 475px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    user-select: none;
+}
+
+.xButton{
+    cursor: pointer;
+}
+
+.innerContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+    gap: 30px;
+}
+
+.loginContent{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.googleLogin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 0px 7px 0px;
+    border-radius: 30px;
+    gap: 5px;
+    border: 1px black solid;
+    cursor: pointer;
+}
+
+.googleLogin:hover{
+    background-color: #37a5dc6c;
+}
+
+.googleLogin > img{
+    height: 20px;
+}
+
+.orContainer{
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.orContainer > div:nth-child(1),
+.orContainer > div:nth-child(3){
+    border-bottom: 1px rgba(0, 0, 0, 0.507) solid;
+    width: 100%;
+    height: 0;
+    display: flex;
+    place-self: center;
+}
+
+.emailAndPassword{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.emailAndPassword > input{
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px black solid;
+}
+
+.loginButton{
+    text-align: center;
+    padding: 7px 0px 7px 0px;
+    border-radius: 30px;
+    border: 1px black solid;
+    cursor: pointer;
+}
+
+.loginButton:hover{
+    background-color: #37a5dc6c;
+}
+
+@media screen and (max-width: 550px) {
+    .formContainer{
+        height: 100vh;
+        width: 100%;
+        border-radius: 0;
+        box-sizing: border-box;
+    }
+
+}

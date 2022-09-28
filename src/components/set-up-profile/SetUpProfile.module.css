@@ -1,0 +1,301 @@
+.formContainer{
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    user-select: none;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.demonstrationContainer{
+    width: 525px;
+    display: flex;
+    flex-direction: column;
+}
+
+.headerPicture{
+    height: 200px;
+    background-color: grey;
+}
+
+.headerPicture > img{
+    max-width: 100%;
+    min-width: 100%;
+    height: 100%;
+}
+
+.profilePicture{
+    position: relative;
+    margin-top: -50px;
+    padding-left: 10px;
+}
+
+.profilePicture > img{
+    border-radius: 50%;
+    background-color: rgb(155, 155, 155);
+    border: 3px white solid;
+    height: 100px;
+    width: 100px;
+    box-sizing: border-box;
+}
+
+.userContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.nameAndUsername{
+    padding: 0px 7px 0px 7px;
+}
+
+.description{
+    padding: 5px 7px 7px 7px;
+}
+
+.nameAndUsername,
+.description{
+    user-select: text;
+}
+
+.editContainer{
+    display: flex;
+    flex-direction: column;
+    width: 525px;
+    gap: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.chooseNameContainer > input{
+    font-size: 15px;
+    padding: 7px 7px 7px 7px;
+    border: 1px black solid;
+    width: 260px;
+    border-radius: 10px;
+}
+
+.chooseUsernameContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputUsername{
+    display: flex;
+}
+
+.inputUsername > p{
+    border: 1px black solid;
+    width: 15px;
+    outline: none;
+    border-right: none;
+    display: flex;
+    align-items: center;
+    padding-left: 2px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.inputUsername > input{
+    font-size: 15px;
+    padding: 7px 7px 7px 1px;
+    border: 1px black solid;
+    border-left: none;
+    width: 250px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.inputUsername > input:focus{
+    outline: none;
+}
+
+.inputDescription{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputDescription > textarea{
+    resize: none;
+    padding: 7px;
+    font-size: 15px;
+    width: 250px;
+    border-radius: 10px;
+}
+
+.inputDescription,
+.chooseUsernameContainer,
+.chooseNameContainer{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigationContainer{
+    display: flex;
+    user-select: none;
+    text-align: center;
+}
+
+.navigationContainer > div{
+    flex: 1;    
+    display: flex;
+    justify-content: center;
+}
+
+.navigationContainer > div:nth-child(1),
+.navigationContainer > div:nth-child(3){
+    cursor: pointer;
+}
+
+.imagesContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    justify-content: center;
+}
+
+.imagesContainer > img,
+.imagesContainer > label > img{
+    height: 50px;
+    width: 50px;
+    border: 2px rgba(128, 128, 128, 0.363) solid;
+    border-radius: 10px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.imagesContainer > img:hover, 
+.imagesContainer > label > img:hover{
+    background-color: rgba(128, 128, 128, 0.205);
+}
+
+.chooseHeaderContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.chooseHeaderContainer > img,
+.chooseHeaderContainer > label{
+    width: 105px;
+    height: 40px;
+    border: 1px grey solid;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.chooseHeaderContainer > label {
+    display: flex;
+    justify-content: center;
+}
+
+.chooseHeaderContainer > label > img{
+    width: 50px;
+}
+
+.firstPage,
+.secondPage,
+.thirdPage{
+    width: 100%;
+    height: 410px;
+    border: 1px rgba(0, 0, 0, 0.411) solid;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.firstPage{
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.finishButton{
+    border: 1px rgb(0, 0, 0) solid;
+    padding: 1px 10px 1px 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.finishButton:hover{
+    background-color: rgba(128, 128, 128, 0.205);
+}
+
+@media screen and (max-width: 585px) {
+    .demonstrationContainer{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .editContainer{
+        width: 100%;
+    }
+
+    .headerPicture > img{
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    .firstPage,
+    .secondPage,
+    .thirdPage{
+        overflow: auto;
+    }
+
+    .navigationContainer > div:nth-child(2){
+        flex-grow: 2;
+    }
+
+    .chooseHeaderContainer{
+        height: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .chooseHeaderContainer > img,
+    .chooseHeaderContainer > label{
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .formContainer{
+        width: 100%;
+    }
+
+    .demonstrationContainer{
+        box-sizing: border-box;
+    }
+
+    .headerPicture > img{
+        box-sizing: border-box;
+    }
+
+    .firstPage,
+    .secondPage,
+    .thirdPage{
+        overflow: auto;
+    }
+
+    .navigationContainer > div:nth-child(2){
+        flex-grow: 2;
+    }
+
+    .chooseHeaderContainer{
+        height: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .chooseHeaderContainer > img,
+    .chooseHeaderContainer > label{
+        border-radius: 10px;
+    }
+}

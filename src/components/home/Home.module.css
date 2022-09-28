@@ -1,0 +1,193 @@
+.outerContainer{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    gap: 35px;
+    box-sizing: border-box;
+}
+
+.exploreSection{
+    position: sticky;
+    top: 0;
+}
+
+.mainSection{
+    max-width: 550px;
+    min-width: 550px;
+    border-left: 1px rgba(165, 163, 163, 0.404) solid;
+    border-right: 1px rgba(165, 163, 163, 0.404) solid;
+    box-sizing: border-box;
+}
+
+.mainSectionHeader{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 56px;
+    font-weight: bold;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    opacity: 90%;
+    width: 100%;
+    z-index: 2;
+}
+
+.inputTweetContainer{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border-bottom: 1px rgba(165, 163, 163, 0.404) solid;
+}
+
+.profilePictureContainer > img{
+    height: 45px;
+    width: 45px;
+    background-color: rgb(155, 155, 155);
+    border-radius: 50%;
+}
+
+.uploadButton{
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+.uploadButton:hover{
+    background-color: #37a5dc4b;
+}
+
+.tweetContent{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+    margin-top: 13px;
+}
+
+.tweetContent > div:nth-child(1){
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.textAndMediaContainer > textarea{
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    font-size: 18px;
+    resize: none;
+}
+
+.textAndMediaContainer > textarea:focus{
+    outline: none;
+}
+
+.media{
+    width: 99%;
+    margin-top: 10px;
+}
+
+.media > img{
+    max-width: 99%;
+    border-radius: 20px;
+}
+
+.inputTweetNav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tweetButton{
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #37a5dc;
+    border-radius: 15px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.tweetButton:hover{
+    background-color: rgb(22, 56, 73);
+}
+
+.exploreSection{
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 585px) {
+    .outerContainer{
+        flex-direction: column-reverse;
+        height: 100vh;
+        max-height: 100vh;
+        min-height: 100vh;
+        box-sizing: border-box;
+        width: 100vw;
+        justify-content: flex-end;
+        gap: 0;
+    }
+
+    .mainSection{
+        border: none;
+        max-width: 100%;
+        min-width: 100%;
+        height: 100%;
+        overflow: scroll;
+    }
+
+    .mainSectionHeader{
+        box-sizing: border-box;
+        position: sticky;
+        top: 0;
+        background-color: white;
+        opacity: 90%;
+        width: 100%;
+        z-index: 2;
+    }
+
+    .exploreSection{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1050px) and (min-width: 585px) and (min-height: 500px) {
+    .outerContainer{
+        width: 100vw;
+    }
+    
+    .exploreSection{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 720px) and (min-width: 585px) and (min-height: 500px) {
+    .outerContainer{
+        gap: 0;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .outerContainer{
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 0;
+    }
+
+    .mainSection{
+        min-width: 600px;
+    }
+
+    .exploreSection{
+        display: none;
+    }
+}

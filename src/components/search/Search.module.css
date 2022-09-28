@@ -1,0 +1,60 @@
+.outerContainer{
+    padding: 10px 0px;
+    position: relative;
+}
+
+.searchContainer{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px black solid;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.searchContainer > input{
+    border: none;
+    font-size: 16px;
+}
+
+.searchContainer > input:focus{
+    outline: none;
+}
+
+.resultsContainer{
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgba(32, 16, 16, 0.247);
+}
+
+.result{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.result:hover{
+    background-color: rgba(128, 128, 128, 0.26);
+}
+
+.userContent{
+    display: flex;
+    flex-direction: column;
+}
+
+.userPicture{
+    display: flex;
+}
+
+.userPicture > img{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: grey;
+}

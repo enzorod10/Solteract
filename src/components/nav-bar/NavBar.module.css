@@ -1,0 +1,186 @@
+.outerContainer{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    user-select: none;
+}
+
+.innerContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user{
+    display: flex;
+    gap: 15px;
+    padding: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.user:hover{
+    background-color: rgba(94, 86, 86, 0.363);
+}
+
+.user > div{
+    display: flex;
+    gap: 10px;
+}
+
+.userIcon{
+    height: 40px;
+    width: 40px;
+}
+
+.userIcon > img{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(155, 155, 155);
+    border-radius: 50%;
+}
+
+.signOut > img{
+    width: 24px;
+    height: 24px;
+}
+
+.elipsis{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.elipsis > img{
+    height: 15px;
+    width: 15px;
+}
+
+.appIcon > img:hover{
+    background-color: #37a5dc75;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.messages,
+.profile,
+.home,
+.search,
+.signOut{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    width: fit-content;
+}
+
+.home:hover,
+.profile:hover,
+.messages:hover,
+.signOut:hover,
+.search:hover{
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.425);
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 585px) {
+    .appIcon,
+    .home > span,
+    .profile > span,
+    .signOut > span,
+    .search > span{
+        display: none;
+    }
+
+    .outerContainer{
+        width: 100%;
+        height: 60px;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        position: relative;
+        box-sizing: border-box;
+        z-index: 2;
+        box-shadow: 0px 0px 2px #163c4e56;
+    }
+
+    .innerContainer{
+        flex-direction: row;
+        justify-content: space-around;
+        height: 100%;
+        gap: 0;
+    }
+
+    .user div{
+        display: none;
+        padding: 0;
+    }
+
+    .user{
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 720px) and (min-width: 586px) and (min-height: 500px) {
+    .outerContainer{
+        width: 100%;
+        align-items: center;
+    }
+    .innerContainer{
+        align-items: center;
+    }
+    
+    .home > span,
+    .profile > span,
+    .signOut > span,
+    .search > span,
+    .user > div:nth-child(2),
+    .user > div:nth-child(1) > :nth-child(2){
+        display: none;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .appIcon,
+    .home > span,
+    .profile > span,
+    .signOut > span,
+    .search > span{
+        display: none;
+    }
+
+    .outerContainer{
+        width: 100%;
+        height: 60px;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        position: relative;
+        box-sizing: border-box;
+        z-index: 2;
+        box-shadow: 0px 0px 2px #163c4e56;
+    }
+
+    .innerContainer{
+        flex-direction: row;
+        justify-content: space-around;
+        height: 100%;
+        gap: 0;
+    }
+
+    .user div{
+        display: none;
+        padding: 0;
+    }
+
+    .user{
+        padding: 0;
+    }
+}

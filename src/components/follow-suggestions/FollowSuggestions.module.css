@@ -1,0 +1,63 @@
+.outerContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.164);
+    justify-content: space-between;
+    width: 100%;
+    gap: 5px;
+    box-sizing: border-box;
+}
+
+.usersContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.user{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 5px;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.user:hover{
+    background-color: rgba(128, 128, 128, 0.459);
+}
+
+.user > div:nth-child(1){
+    flex: 1;
+    padding: 0px 5px 0px 0px;
+}
+
+.user > div:nth-child(2){
+    flex: 4;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user > div:nth-child(3){
+    border: 1px black solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+
+.user > div:nth-child(3):hover{
+    background-color: rgba(0, 0, 0, 0.397);
+}
+
+.profilePicture > img{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: rgb(155, 155, 155);
+}

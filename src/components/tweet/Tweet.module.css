@@ -1,0 +1,207 @@
+.outerContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.normalTweetContainer{
+    width: 100%;
+    border-bottom: 1px rgba(165, 163, 163, 0.404) solid;
+    display: flex;
+    box-sizing: border-box;
+    padding: 10px;
+    gap: 10px;  
+    position: relative;
+}
+
+.retweetInfoContainer{
+    display: flex;
+    padding-left: 10px;
+    gap: 10px;
+    padding-top: 4px;
+    margin-bottom: -3px;
+    align-items: center;
+}
+
+.retweetInfoContainer > div:nth-child(1){
+    width: 45px;
+    display: flex;
+    justify-content: end;
+}
+
+.profilePictureContainer > img{
+    height: 45px;
+    width: 45px;
+    background-color: rgb(155, 155, 155);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.profilePictureContainer > img:hover{
+    background-color: rgb(91, 89, 97);
+}
+
+.tweetContent{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.innerContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+}
+
+.innerContainer > div:nth-child(2){
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+.tweetHeader{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.name,
+.username{
+    cursor: pointer;
+}
+
+.username{
+    color: #536471
+}
+
+.name:hover{
+    text-decoration: underline;
+}
+
+.editTweetButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 15px;
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 5px;
+    top: 5px;
+}
+
+.editTweetButton:hover{
+    background-color: #37a5dc4b;
+}
+
+.editTweetContainer{
+    white-space: nowrap;
+    border-radius: 10px;
+    z-index: 2;
+    background-color: white;
+}
+
+.editTweetContainer > div{
+    border: 1px black solid;
+    padding: 10px 5px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    gap: 5px;
+}
+
+.editTweetContainer > div:hover{
+    background-color: rgba(128, 128, 128, 0.199);
+}
+
+.editTweetContainer > div > img{
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+}
+
+.editTweetContainer > div:nth-child(1){
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.editTweetContainer > div:nth-child(2){
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.tweetBody,
+.date{
+    cursor: pointer;
+}
+
+.date{
+    color: #536471;
+}
+
+.mediaContainer{
+    max-width: 99%;
+    box-sizing: border-box;
+}
+
+.mediaContainer > img{
+    max-width: 99%;
+    border-radius: 20px;
+}
+
+.userInfo{
+    display: flex;
+    gap: 5px;
+}
+
+.userInfo > div:nth-child(1){
+    font-weight: bold;
+}
+
+.interactionContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.interactionContainer > div{
+    cursor: pointer;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 5px;
+    position: relative;
+}
+
+.interactionContainer > div:nth-child(1):hover{
+    background-color: #37a5dc4b;
+}
+
+.interactionContainer > div:nth-child(2):hover{
+    background-color: rgba(0, 128, 0, 0.2);
+}
+
+.interactionContainer > div:nth-child(3):hover{
+    background-color: rgba(128, 0, 0, 0.2);
+}
+
+.interactionContainer > div:nth-child(4):hover{
+    background-color: #37a5dc4b;
+}
+
+.favoritesAndRetweets{
+    display: flex;
+    gap: 10px;
+}
+
+.favoritesAndRetweets > div{
+    cursor: pointer;
+}
+
+.favoritesAndRetweets > div:hover{
+    text-decoration: underline;
+    text-decoration-color: rgba(109, 109, 109, 0.445);
+}
