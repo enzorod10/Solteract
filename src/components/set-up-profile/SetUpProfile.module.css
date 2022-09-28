@@ -8,7 +8,7 @@
     gap: 10px;
     user-select: none;
     overflow: hidden;
-    padding-bottom: 10px;
+    padding-bottom: 65px;
 }
 
 .demonstrationContainer{
@@ -106,6 +106,8 @@
     border: 1px black solid;
     border-left: none;
     width: 250px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }

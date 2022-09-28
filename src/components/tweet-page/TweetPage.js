@@ -32,11 +32,18 @@ const TweetPage = props => {
 
     return (
         <div className={styles.outerContainer}>
-            <NavBar signOut={props.signOut} currentUser={props.currentUser} isLoggedIn={props.isLoggedIn}/>
-            <div className={styles.mainSection}>
+                {window.screen.width <= 585 && 
                 <div className={styles.header}>
                     <span style={{fontSize: '25px'}} onClick={() => navigate(-1)}>{'<'}</span> <span>Transmission</span>
-                </div>
+                </div>}
+
+                <NavBar signOut={props.signOut} currentUser={props.currentUser} isLoggedIn={props.isLoggedIn}/>
+
+            <div className={styles.mainSection}>
+                {window.screen.width > 585 &&
+                <div className={styles.header}>
+                    <span style={{fontSize: '25px'}} onClick={() => navigate(-1)}>{'<'}</span> <span>Transmission</span>
+                </div>}
                 <Tweet disallowReply={true} deleteTweet={props.deleteTweet} action={props.submitAction} undoAction={props.undoAction} replyToTweet={props.submitReply}currentUser={props.currentUser} tweetObject={tweet}/>
                 {typeof tweet.replies !== 'undefined' && tweet.replies.length > 0 && 
                 <div style={{display: "flex", justifyContent: "center", padding: '10px 0px', borderBottom: '1px rgba(165, 163, 163, 0.404) dashed'}}>

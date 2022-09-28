@@ -13,7 +13,7 @@ import uniqid from 'uniqid'
 import dayjs from 'dayjs'
 
 import { initializeApp } from "firebase/app";
-import { getFirestore, updateDoc, collection, doc, arrayUnion, getDoc, setDoc, arrayRemove, query, where, getDocs, select } from 'firebase/firestore'
+import { getFirestore, updateDoc, collection, doc, arrayUnion, getDoc, setDoc, arrayRemove, query, where, getDocs } from 'firebase/firestore'
 import { getStorage, ref, uploadBytes, getDownloadURL, deleteObject } from 'firebase/storage'
 import { onAuthStateChanged, getAuth } from 'firebase/auth'
 

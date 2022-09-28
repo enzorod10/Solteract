@@ -2,21 +2,10 @@ import styles from './Login.module.css'
 import { Link, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
-import { initializeApp } from "firebase/app";
 import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithRedirect } from 'firebase/auth';
 import googleIcon from './assets/googleIcon.png'
 import icon50 from './assets/icon50.png'
 
-const firebaseConfig = {
-    apiKey: "AIzaSyBMUyuCaT-w1Djk9COvL_uv5hpEWgWbvFU",
-    authDomain: "soterak-1f634.firebaseapp.com",
-    projectId: "soterak-1f634",
-    storageBucket: "soterak-1f634.appspot.com",
-    messagingSenderId: "1011495664589",
-    appId: "1:1011495664589:web:40d0f06ae1df49bbbea284"
-  };
-
-const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 
 const Login = props => {

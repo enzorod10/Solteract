@@ -65,9 +65,14 @@ const Home = props => {
     } else {
         return(
             <div className={styles.outerContainer}>
+                {window.screen.width <= 585 && 
+                <div className={styles.mainSectionHeader}>Home</div>}
+               
                 <NavBar signOut={props.signOut}replyMode={reply.replyMode} currentUser={props.currentUser} isLoggedIn={props.isLoggedIn}/>
+
                 <div className={styles.mainSection} style={{opacity: reply.replyMode ? '0.8' : '1', filter: reply.replyMode ? 'brightness(0.5) blur(20px)' : 'brightness(1) blur(0px)'}}>
-                    <div className={styles.mainSectionHeader}>Home</div>
+                    {window.screen.width > 585 && 
+                    <div className={styles.mainSectionHeader}>Home</div>}
                     <div className={styles.inputTweetContainer}>
                         <div className={styles.profilePictureContainer}>
                             <img alt='User' src={props.currentUser.profilePicture && props.currentUser.profilePicture}/>

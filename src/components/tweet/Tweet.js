@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import styles from './Tweet.module.css'
 import { useLocation, useNavigate } from 'react-router-dom'
-import defaultIcon from './assets/defaultIcon.png'
 import replyIcon from '../assets/actions/reply.png'
 import shareIcon from '../assets/actions/share.png'
 import ellipsis from './assets/ellipsis.png'
@@ -144,7 +143,7 @@ const Tweet = props => {
                         C283.818,58.42,225.405,0.001,153.607,0z"/></g>
                     </svg>
                 </div>
-                {userRetweeted ? <div>You Retransmitted</div> : <div> {retweeter.name} Retweeted</div>}
+                {userRetweeted ? <div>You Retransmitted</div> : <div> {retweeter && retweeter.name} Retweeted</div>}
             </div>
             }
             <div style={{border: replyMode && 'none'}} className={styles.normalTweetContainer}>

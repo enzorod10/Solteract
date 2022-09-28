@@ -65,6 +65,7 @@ const SearchPage = props => {
             <div className={styles.header}>
                 <span onClick={() => navigate(-1)}>{'<'} </span> <span>Explore</span>
             </div>
+            <NavBar signOut={props.signOut} currentUser={props.currentUser} isLoggedIn={props.isLoggedIn}/>
             <div className={styles.mainSection}>
                 <div className={styles.searchContainer}> 
                     <img src={searchIcon} alt='search icon'/>
@@ -85,7 +86,6 @@ const SearchPage = props => {
                 </div>
                 <FollowSuggestions isLoggedIn={props.isLoggedIn} followUser={props.followUser} unfollowUser={props.unfollowUser} currentUser={props.currentUser} />
             </div>
-            <NavBar signOut={props.signOut} currentUser={props.currentUser} isLoggedIn={props.isLoggedIn}/>
         </div>
     )
 }

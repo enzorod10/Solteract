@@ -99,10 +99,18 @@
         display: none;
     }
 
+    .home:hover,
+    .profile:hover,
+    .messages:hover,
+    .signOut:hover,
+    .search:hover{
+        cursor: pointer;
+        background-color: none;
+}
+
     .outerContainer{
         width: 100%;
         height: 60px;
-        padding: 0;
         margin: 0;
         display: flex;
         position: relative;

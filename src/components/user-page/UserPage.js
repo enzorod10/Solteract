@@ -114,8 +114,7 @@ const UserPage = props => {
     } else {
         return(
             <div className={styles.outerContainer}>
-                <NavBar signOut={props.signOut}replyMode={reply.replyMode} currentUser={props.currentUser} isLoggedIn={props.isLoggedIn}/>
-                <div style={{opacity: reply.replyMode ? '0.8' : '1', filter: reply.replyMode ? 'brightness(0.5) blur(5px)' : 'brightness(1) blur(0px)'}} className={styles.mainSection}>
+                {window.screen.width <= 585 && 
                     <div className={styles.header}>
                         <div className={styles.backButton}onClick={goBack}>
                             {'<'}
@@ -124,7 +123,19 @@ const UserPage = props => {
                                 {currentUser !== '' && <div style={{fontWeight: 'bold'}}>{currentUser.name}</div>}
                                 {currentUser !== '' && (currentUser.tweets.length === 1 ? <div style={{color: '#536471'}}> 1 Transmission </div> : <div style={{color: '#536471'}}> {currentUser.tweets.length} Transmissions </div>)}
                         </div>
-                    </div>
+                    </div>}
+                <NavBar signOut={props.signOut}replyMode={reply.replyMode} currentUser={props.currentUser} isLoggedIn={props.isLoggedIn}/>
+                <div style={{opacity: reply.replyMode ? '0.8' : '1', filter: reply.replyMode ? 'brightness(0.5) blur(5px)' : 'brightness(1) blur(0px)'}} className={styles.mainSection}>
+                    {window.screen.width > 585 && 
+                    <div className={styles.header}>
+                        <div className={styles.backButton}onClick={goBack}>
+                            {'<'}
+                        </div>
+                        <div className={styles.nameAndTweetCounter}>
+                                {currentUser !== '' && <div style={{fontWeight: 'bold'}}>{currentUser.name}</div>}
+                                {currentUser !== '' && (currentUser.tweets.length === 1 ? <div style={{color: '#536471'}}> 1 Transmission </div> : <div style={{color: '#536471'}}> {currentUser.tweets.length} Transmissions </div>)}
+                        </div>
+                    </div>}
                     <div className={styles.headerPicture}>
                         <img alt='header' src={currentUser.profileHeader && currentUser.profileHeader} />
                     </div>

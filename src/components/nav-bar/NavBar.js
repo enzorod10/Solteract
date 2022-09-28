@@ -1,6 +1,5 @@
 import styles from './NavBar.module.css'
-import defaultIcon from './assets/defaultIcon.png'
-import { Link, useNavigate, useLocation } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import icon from '../assets/icon/icon50.png'
 import homeIcon from './assets/home.png'
 import profileIcon from './assets/user.png'
@@ -8,11 +7,13 @@ import messageIcon from './assets/message.png'
 import ellipsis from './assets/ellipsis.png'
 import signOut from './assets/logout.png'
 import searchIcon from './assets/searchIcon.png'
+import { useEffect, useRef } from 'react'
 
 const NavBar = props => {
     const navigate = useNavigate()
     const locate = useLocation()
-
+    const outerContainer = useRef(null)
+    
     const handleNavigation = (location) => {
         if (location !== locate.pathname){
             if (props.isLoggedIn){
@@ -36,7 +37,7 @@ const NavBar = props => {
     }
 
     return(
-        <div className={styles.outerContainer} style={{opacity: props.replyMode ? '0.8' : '1', filter: props.replyMode ? 'brightness(0.5) blur(5px)' : 'brightness(1) blur(0px)'}}>
+        <div ref={outerContainer} className={styles.outerContainer} style={{opacity: props.replyMode ? '0.8' : '1', filter: props.replyMode ? 'brightness(0.5) blur(5px)' : 'brightness(1) blur(0px)'}}>
             <div className={styles.innerContainer}>
                 <div className={styles.appIcon} onClick={() => handleNavigation('/home')}>
                     <img src={icon} alt='icon'/>
