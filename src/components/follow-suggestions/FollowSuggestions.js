@@ -8,13 +8,13 @@ import { getFirestore, query, where, collection, doc, getDocs, getDoc, QuerySnap
 import defaultIcon from './assets/defaultIcon.png'
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBMUyuCaT-w1Djk9COvL_uv5hpEWgWbvFU",
-    authDomain: "soterak-1f634.firebaseapp.com",
-    projectId: "soterak-1f634",
-    storageBucket: "soterak-1f634.appspot.com",
-    messagingSenderId: "1011495664589",
-    appId: "1:1011495664589:web:40d0f06ae1df49bbbea284"
-  };
+    apiKey: process.env.REACT_APP_apiKey,
+    authDomain: process.env.REACT_APP_authDomain,
+    projectId: process.env.REACT_APP_projectId,
+    storageBucket: process.env.REACT_APP_storageBucket,
+    messagingSenderId: process.env.REACT_APP_messagingSenderId,
+    appId: process.env.REACT_APP_appId
+};
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
