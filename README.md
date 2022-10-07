@@ -21,7 +21,7 @@
     <a href="https://github.com/enzorod10/Solteract"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="soterak-1f634.web.app/">View Demo</a>
+    <a href="https://soterak-1f634.web.app/">View Demo</a>
     ·
     <a href="https://github.com/enzorod10/Solteract/issues">Report Bug</a>
     ·
@@ -161,9 +161,15 @@ _For more examples, please refer to the [Documentation](https://github.com/enzor
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Object locations for every object stored in the backend (firebase)
+- [x] User authentication through Google or Email/Password
 - [x] Responsiveness on any device
-- [x] Added leaderboard for every map
+- [x] Ability to edit profiles
+- [x] Search feature implemented
+- [x] Ability to interact with transmissions
+  - [x] Ability to Reply
+  - [x] Ability to Retransmit
+  - [x] Ability to Favorite
+  - [ ] Ability to Share
 
 See the [open issues](https://github.com/enzorod10/Solteract/issues) for a full list of proposed features (and known issues).
 
