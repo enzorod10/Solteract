@@ -6,7 +6,7 @@ import googleIcon from './assets/googleIcon.png'
 import icon100 from './assets/icon100.png'
 
 import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, GoogleAuthProvider, signInWithRedirect, getRedirectResult } from 'firebase/auth';
+import { getAuth, GoogleAuthProvider, signInWithRedirect, signInWithEmailAndPassword } from 'firebase/auth';
 
 const firebaseConfig = {
     apiKey: process.env.REACT_APP_apiKey,
@@ -38,6 +38,14 @@ const LandingPage = props => {
         let signIn = await signInWithRedirect(auth, provider)
     }
 
+    const useGuestAccount = () => {
+        try{
+            signInWithEmailAndPassword(auth, 'Guest@gmail.com', '123456').then(() => {
+            navigate('/home')})
+        } catch{
+        }
+    }
+
     return(
         <div style={isSigningUp === true ? {position: 'absolute'} : {position: 'relative'}} className={styles.outer}>
             <div className={styles.imageContainer}>
@@ -65,6 +73,9 @@ const LandingPage = props => {
                 </div>
                 <div style={{display: 'flex', gap: 8, flexDirection:'column'}}className={styles.existingAccount}>
                     <p style={{fontSize: 19}}>Already have an account?</p>
+                    <div className={styles.signInLink} onClick={useGuestAccount}>
+                        <div className={styles.signInButton}>Use Guest Account</div>
+                    </div>
                     <Link className={styles.signInLink} to={{pathname: '/login'}}>
                         <div className={styles.signInButton}>Sign In</div>
                     </Link>

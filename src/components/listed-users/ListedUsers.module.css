@@ -82,7 +82,7 @@
 
 @media screen and (max-width: 585px) {
     .outerContainer{
-        flex-direction: column-reverse;
+        flex-direction: column;
         height: 100vh;
         max-height: 100vh;
         min-height: 100vh;

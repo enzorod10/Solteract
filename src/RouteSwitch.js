@@ -552,7 +552,7 @@ function RouteSwitch(){
     return(
         <BrowserRouter basename='/'>
             <Routes>
-                <Route path='/' element={<LandingPage addToUserCollection={addToUserCollection} isLoggedIn={isLoggedIn} />}/> 
+                <Route path='/' element={<LandingPage updateUser={updateUser} addToUserCollection={addToUserCollection} isLoggedIn={isLoggedIn} />}/> 
                 <Route path='/signup' element={<Signup addToUserCollection={addToUserCollection} updateUser={updateUser}/>} />
                 <Route path='/login' element={<Login isLoggedIn={isLoggedIn} updateUser={updateUser}/>} />
                 <Route element={<ProtectedRoutes isLoggedIn={isLoggedIn}/>}>

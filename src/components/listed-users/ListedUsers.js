@@ -100,11 +100,18 @@ const ListedUsers = props => {
 
     return(
         <div className={styles.outerContainer}>
+            {window.screen.width <= 585 && 
+            <div className={styles.header}>
+                <span style={{fontSize: '25px'}} onClick={() => navigate(-1)}>{'<'}</span> <span>Transmission</span>
+            </div>}
+
             <NavBar signOut={props.signOut} currentUser={props.currentUser} isLoggedIn={props.isLoggedIn}/>
+            
             <div className={styles.mainSection}>
+                {window.screen.width > 585 &&
                 <div className={styles.header}>
-                    <span onClick={() => navigate(-1)}>{'<'}</span> <span>{listName}</span>
-                </div>
+                    <span style={{fontSize: '25px'}} onClick={() => navigate(-1)}>{'<'}</span> <span>Transmission</span>
+                </div>}
                 <div className={styles.usersContainer}>
                     {list.map(user => {
                         return <div key={uniqid()} className={styles.user} onClick={() => navigate('/user/' + user.username)}> 
